@@ -161,11 +161,11 @@ if (signatureImage) {
 
       {[
         { label: 'Badge', name: 'badge' },
+        { label: 'Name', name: 'name' },
         { label: 'Date (worked)', name: 'date' },
         { label: 'Begin Time', name: 'beginTime' },
         { label: 'End Time', name: 'endTime' },
         { label: 'Date (signed)', name: 'date2' },
-        { label: 'Name', name: 'name' },
         { label: 'Business Name', name: 'businessName' },
         { label: 'Business Location', name: 'businessLocation' },
         { label: 'Bill To Name & Address', name: 'billTo' },

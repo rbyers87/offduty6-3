@@ -18,18 +18,16 @@ export function UserList() {
   const loadUsers = async () => {
     setIsLoading(true);
     setError(null);
-    
+
     try {
-      // Try the direct query approach instead of RPC
-      const { data, error } = await supabase
-        .from('profiles')
-        .select('id, full_name, email, role, badge_number');
-      
+      // Use your Supabase RPC function to get profiles with email
+      const { data, error } = await supabase.rpc('get_profiles_with_email');
+
       if (error) {
         console.error("Error fetching profiles:", error);
         throw error;
       }
-      
+
       console.log("Loaded users:", data);
       setUsers(data || []);
     } catch (err: any) {
